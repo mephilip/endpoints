@@ -1,0 +1,133 @@
+/*
+ =======================================================================================================================
+	Font Imports/Styles
+ =======================================================================================================================
+*/
+
+@font-face {
+	font-family:'icons';
+	src:url('../fonts/icons.eot');
+	src:url('../fonts/icons.eot#iefix') format('embedded-opentype'),url('../fonts/icons.woff') format('woff'),url('../fonts/icons.ttf') format('truetype'),url('../fonts/icons.svg#icons') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'foundation-icons';
+  src: url("../fonts/foundation-icons.eot");
+  src: url("../fonts/foundation-icons.eot?#iefix") format("embedded-opentype"),url("../fonts/foundation-icons.woff") format("woff"),url("../fonts/foundation-icons.ttf") format("truetype"),url("../fonts/foundation-icons.svg#fontcustom") format("svg");
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'fontello';
+	src:url('../fonts/fontello.eot');
+	src:url('../fonts/fontello.eot?#iefix') format('embedded-opentype'),url('../fonts/fontello.woff') format('woff'),url('../fonts/fontello.ttf') format('truetype'),url('../fonts/fontello.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'GothamBook';
+	src:url('../fonts/gotham-book-webfont.eot');
+	src:url('../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/gotham-book-webfont.woff') format('woff'),url('../fonts/gotham-book-webfont.ttf') format('truetype'),url('../fonts/gotham-book-webfont.svg#mathilderegular') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'MathildeRegular';
+	src:url('../fonts/mathilde-webfont.eot');
+	src:url('../fonts/mathilde-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/mathilde-webfont.woff2') format('woff2'),url('../fonts/mathilde-webfont.woff') format('woff'),url('../fonts/mathilde-webfont.ttf') format('truetype'),url('../fonts/mathilde-webfont.svg#mathilderegular') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'flamaultralight';
+	src:url('../fonts/Flama-Ultralight-webfont.eot');
+	src:url('../fonts/Flama-Ultralight-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Flama-Ultralight-webfont.woff2') format('woff2'),url('../fonts/Flama-Ultralight-webfont.woff') format('woff'),url('../fonts/Flama-Ultralight-webfont.ttf') format('truetype'),url('../fonts/Flama-Ultralight-webfont.svg#flamaultralight') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'flamalight';
+	src:url('../fonts/Flama-Light-webfont.eot');
+	src:url('../fonts/Flama-Light-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Flama-Light-webfont.woff2') format('woff2'),url('../fonts/Flama-Light-webfont.woff') format('woff'),url('../fonts/Flama-Light-webfont.ttf') format('truetype'),url('../fonts/Flama-Light-webfont.svg#flamalight') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'flamabook';
+	src:url('../fonts/Flama-Book-webfont.eot');
+	src:url('../fonts/Flama-Book-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Flama-Book-webfont.woff2') format('woff2'),url('../fonts/Flama-Book-webfont.woff') format('woff'),url('../fonts/Flama-Book-webfont.ttf') format('truetype'),url('../fonts/Flama-Book-webfont.svg#flamabook') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'flamabasic';
+	src:url('../fonts/Flama-Basic-webfont.eot');
+	src:url('../fonts/Flama-Basic-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Flama-Basic-webfont.woff2') format('woff2'),url('../fonts/Flama-Basic-webfont.woff') format('woff'),url('../fonts/Flama-Basic-webfont.ttf') format('truetype'),url('../fonts/Flama-Basic-webfont.svg#flamabasic') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'flamalight_italic';
+	src:url('../fonts/Flama-LightItalic-webfont.eot');
+	src:url('../fonts/Flama-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Flama-LightItalic-webfont.woff2') format('woff2'),url('../fonts/Flama-LightItalic-webfont.woff') format('woff'),url('../fonts/Flama-LightItalic-webfont.ttf') format('truetype'),url('../fonts/Flama-LightItalic-webfont.svg#flamalight_italic') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'ProximaNova-Regular';
+	src:url('../fonts/ProximaNova-Regular.eot');
+	src:url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Regular.woff2') format('woff2'),url('../fonts/ProximaNova-Regular.woff') format('woff'),url('../fonts/ProximaNova-Regular.ttf') format('truetype'),url('../fonts/ProximaNova-Regular.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'ProximaNova-Bold';
+	src:url('../fonts/ProximaNova-Bold.eot');
+	src:url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Bold.woff2') format('woff2'),url('../fonts/ProximaNova-Bold.woff') format('woff'),url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'ProximaNova-Thin';
+	src:url('../fonts/ProximaNova-Thin.eot');
+	src:url('../fonts/ProximaNova-Thin.eot?#iefix') format('embedded-opentype'),url('../fonts/ProximaNova-Thin.woff2') format('woff2'),url('../fonts/ProximaNova-Thin.woff') format('woff'),url('../fonts/ProximaNova-Thin.ttf') format('truetype'),url('../fonts/ProximaNova-Thin.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'Merriweather-LightItalic';
+	src:url('../fonts/Merriweather-LightItalic.eot');
+	src:url('../fonts/Merriweather-LightItalic.eot?#iefix') format('embedded-opentype'),url('../fonts/Merriweather-LightItalic.woff2') format('woff2'),url('../fonts/Merriweather-LightItalic.woff') format('woff'),url('../fonts/Merriweather-LightItalic.ttf') format('truetype'),url('../fonts/Merriweather-LightItalic.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'Merriweather-Light';
+	src:url('../fonts/Merriweather-Light.eot');
+	src:url('../fonts/Merriweather-Light.eot?#iefix') format('embedded-opentype'),url('../fonts/Merriweather-Light.woff2') format('woff2'),url('../fonts/Merriweather-Light.woff') format('woff'),url('../fonts/Merriweather-Light.ttf') format('truetype'),url('../fonts/Merriweather-Light.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'Merriweather-Regular';
+	src:url('../fonts/Merriweather-Regular.eot');
+	src:url('../fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/Merriweather-Regular.woff2') format('woff2'),url('../fonts/Merriweather-Regular.woff') format('woff'),url('../fonts/Merriweather-Regular.ttf') format('truetype'),url('../fonts/Merriweather-Regular.svg') format('svg');
+	font-weight:normal;
+	font-style:normal
+}

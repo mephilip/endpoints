@@ -1,0 +1,399 @@
+/*
+ =======================================================================================================================
+	Styles for V3 State pages for Auto Insurance
+ =======================================================================================================================
+*/
+
+.stat-compare {
+	@include grid-row();
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	background: $secondary-color;
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+	& > * {
+		@include grid-column(
+			$columns: 12
+		);
+	}
+	@media #{$medium-up} {	
+		& > * {
+			@include grid-column(
+				$columns: 6
+			);
+		}
+	}
+	.stat-left {
+		font-family: $font-family-proxima-thin;	
+		color: $white;
+		margin-bottom: 1rem;
+		@media #{$medium-up} {
+			margin-bottom: 0;
+		}
+		.name {
+			font-size: 1.5rem;
+			line-height: 1.875rem;
+			margin-bottom: 0;
+			color: $white;
+			@media #{$medium-up} {
+				font-size: 1.875rem;
+			}
+		}
+		.population {
+			font-size: 1.125rem;
+			@media #{$medium-up} {
+				font-size: 1.5rem;
+			}
+			span {
+				margin-left: .5rem;
+			}
+		}
+	}
+	.stat-right {
+		.bar-container {
+			background: $darkblue;
+			position: relative;
+			margin-bottom: 1rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			&:hover {
+				opacity: .9;
+			}
+			.bar {
+				height: 2rem;
+				// overflow: hidden;
+				position: relative;
+				max-width: 100%;
+				.key {
+					left: .75rem;
+					color: $black;
+					font-weight: 700;
+					width: 8rem;
+				}
+				&.white {
+					background-color: $white;
+				}
+				&.grey {
+					background-color: $base;
+			  }
+			}
+			.key {
+				right: .75rem;
+				display: block;
+				position: absolute;
+				height: 2rem;
+				line-height: 2rem;
+				color: #70d0f6;
+				font-size: .875rem;
+				top: 0;
+				font-family: $font-family-proxima-regular;
+			}
+		}
+	}
+	&.left {
+		width: 100%;
+		margin-top: .75rem;
+		margin-bottom: .75rem;
+		@media #{$large-up} {
+			@include grid-column(
+				$columns: 6
+			);
+			margin-top: 0;
+			margin-bottom: 2.5rem;
+		}
+		.stat-left {
+			.name {
+				font-size: 1.5rem;
+			}
+			.population {
+				font-size: 1rem;
+			}
+		}
+		.stat-right {
+			
+		}
+	}
+	&.city {
+		margin-top: 5rem;
+	}
+}
+
+.insurance-minimums {
+	background: $secondary-color;
+	color: $white;
+	padding: .875rem;
+	font-family: $font-family-proxima-bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+	p.header {
+		font-family: $font-family-proxima-regular;
+		font-size: 1.25rem;
+		line-height: 1.25rem;
+		display: block;
+		text-align: center;
+		margin-bottom: .5rem;
+	}
+	.stat-row {
+		display: table;
+		@include grid-row();
+		margin-bottom: .75rem;
+		@media #{$medium-up} {	
+			margin-bottom: 1.5rem;
+		}
+		&:last-of-type {
+			margin-bottom: .5rem;
+		}
+		.stat {
+			display: table-cell;
+			text-align: center;
+			@include grid-column(
+				$columns: 6
+			);
+			float: none;
+			@media #{$medium-up} {
+				display: block;
+				width: 100%;
+				margin-bottom: 1rem;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+			@media #{$large-up} {
+				display: table-cell;
+				@include grid-column(
+					$columns: 6
+				);
+				float: none;
+			}
+			.number {
+				font-size: 2.125rem;
+				line-height: 1.75rem;
+				font-weight: 700;
+			}
+			.text {
+				font-family: $font-family-proxima-thin;
+				font-size: .875rem;
+				line-height: 1rem;
+			}
+		}
+	}
+}
+
+.city-bar-graph {
+	float: left;
+	width: 100%;
+	h3 {
+		font-family: $font-family-proxima-regular;
+		text-align: center;
+	}
+	ul {
+		@include grid-row(10);
+		list-style: none;
+		li {
+			@include grid-column(
+				$columns: 2,
+				$collapse: true
+			);
+			border-right: 2px solid $white;
+			text-align: center;
+			font-family: $font-family-proxima-regular;
+			margin-bottom: 0;
+			&:first-of-type {
+				@include grid-column(
+					$offset: 1,
+					$collapse: true
+				);
+			}
+			&:hover {
+				opacity: .9;
+			}
+			.container {
+				min-height: 150px;
+				position: relative;
+				.column {
+					background: $primary-color;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					.key {
+						position: absolute;
+						top: -1.625rem;
+						left: 0;
+						right: 0;
+					}
+				}
+			}
+			.name {
+				background: $primary-color;
+				opacity: .9;
+				color: $white;
+				padding: .875rem .5rem;
+				font-family: $font-family-proxima-regular;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: .5rem;
+				line-height: .75rem;
+				@media #{$medium-up} {
+					font-size: .75rem;
+					line-height: 1rem;
+				}
+			}
+			.logo {
+				padding: 0 1rem;
+				border-right: 1px solid $smoke;
+				border-left: 1px solid $smoke;
+				border-bottom: 1px solid $smoke;
+				height: 3.75rem;
+				display: none;
+				@media #{$medium-up} {
+					display: block;
+				}
+				img {
+					margin: 1rem 0;
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+	.quote-form {
+		@include grid-column(
+			$columns: 10,
+			$offset: 1
+		);
+		margin-top: .125rem;
+		.quote-submit {
+			margin-left: 0;
+			margin-top: 1rem;
+			@media #{$medium-up} {
+				margin-left: inherit;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.quote-form {
+	width: 100%;
+	@media #{$medium-up} {
+		@include grid-column(
+			$columns: 5
+		);
+	}
+	background: $smoke;
+	text-align: center;
+	padding: 1rem 0;
+	#zip-code {
+		font-family: $font-family-proxima-regular;
+		font-size: 1.375rem;	
+		width: 150px;
+		display: inline-block;
+		margin-bottom: 0;
+		text-align: center;
+		vertical-align: top;
+	}
+	.quote-submit {
+		font-size: .75rem;
+		font-weight: 700;
+		padding: .625rem 2rem;
+		margin-left: .5rem;
+		margin-bottom: 0;
+		border-bottom: 3px solid $steel;
+		&.orange {
+			background-color: $orange;
+		}
+	}
+	&.right, &.center {
+		padding: 2rem 3rem;
+		margin-left: 4rem;
+		margin-bottom: 1rem;
+		h3 {
+			font-family: $font-family-proxima-regular;
+			color: $black;
+			font-size: 1.675rem;
+			margin-bottom: 1.5rem;
+		}
+		#zip-code {
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
+	&.right {
+		.quote-submit {
+			margin-left: 0;
+		}
+	}
+	&.center {
+		margin: 3rem auto 0;
+		float: none;
+	}
+}
+
+.company-marketshare {
+	background: $secondary-color;
+	padding: 1rem 2rem;
+	float: left;
+	font-family: $font-family-proxima-bold;
+	margin-right: 1rem;
+	@include grid-column(
+		$columns: 12
+	);
+	@media #{$small-up} {
+		@include grid-column(
+			$columns: 6
+		);
+	}
+	@media #{$medium-up} {
+		@include grid-column(
+			$columns: 12
+		);
+	}
+	ul {
+		list-style: decimal;
+		margin: 1rem 2rem;
+		li {
+			color: $white;
+			margin-bottom: .5rem;
+		}
+	}
+	.quote-form {
+		width: 100%;
+		background: none;
+		margin: 0;
+		padding: 0;
+		#zip-code {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+		.quote-submit {
+			margin-left: 0;
+			width: 100%;
+			@media #{$large-up} {
+				width: auto;
+			}
+		}
+	}
+}
+
+#main_chart {
+	padding: 1.5rem;
+	background-color: $smoke;
+	height: 100%;
+	width: 100%;
+}
+
+#modal {
+	margin-bottom: 30px;
+	min-height: 86px;
+	table{
+    border:0px;
+    margin-bottom: 0px;
+	}
+	h1{
+    text-align: center;
+	}
+	h2{
+    text-align: center;
+	}
+}

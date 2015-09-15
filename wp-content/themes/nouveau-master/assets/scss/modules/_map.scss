@@ -1,0 +1,421 @@
+$map-blue: #23c2ff;
+#data-map{
+	background: #eee;
+	padding:rem-calc(0 25 25 25);
+	@include grid-row();
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+	.page-item {
+		padding: rem-calc(20 0);
+	}
+	
+	#map-inner{
+		background: white;
+		padding:0px !important;
+		border-bottom: 2px solid #eeeeee;
+		position: relative;
+		@extend .clearfix;
+		.block-left{
+			padding:0px 0px 0px 0px;
+			margin-bottom: 0px;
+			@include grid-column(12);
+			border-right: 0px;
+			@media #{$large-up}{
+				@include grid-column(9);
+				min-height: 580px;
+			}
+			#map{
+				width: 670px;
+				margin: 0 auto;
+				margin-top: 20px !important;
+				position: relative;
+				@media #{$large-up}{
+					margin-left: 5px;
+				}
+			}			
+		}
+		.widget-right{
+			@include grid-column(12);
+			height:100%;
+			margin:0px;
+			padding: 0px;
+			@media #{$large-up}{
+				border-left: 2px solid #eeeeee;
+				@include grid-column(3);
+			}
+			.detail-wrap{
+				@media #{$medium-only} { 
+					@include grid-row();
+					border-top: 1px solid #eeeeee;
+				}
+			}
+			.details{
+				padding: rem-calc(5 17);
+				@extend .clearfix;
+				margin-bottom: rem-calc(10);
+				
+				&:first-child{
+					padding-top: rem-calc(17);
+				}
+				&:last-child{
+					border-bottom: 0px;
+				}
+				@media #{$medium-only} { 
+					@include grid-column(3);
+					border-right: 2px solid #eeeeee;
+					border-bottom: 0px;
+					padding: rem-calc(20 15 30 15);
+					margin-bottom: 0px;
+					&:last-child{
+						border-right: 0px;
+					}
+				}
+				@media #{$large-up}{
+					padding: 0px;
+				}
+			}
+			.stat{
+				@extend .clearfix;
+				font-size: 11px;
+				border-bottom:1px solid #eeeeee;
+				padding:5px 0px;
+				font-family: $font-family-merriweather-regular;
+				position: relative;
+				margin-top: rem-calc(10);
+				&.indent{
+					margin-left: rem-calc(10);
+				}
+				.left{
+					color: #666666;
+					text-align: left;
+					&.bold{
+						color:#222;
+					}
+				}
+				.stat-num{					
+					text-align: right;
+					padding:0px !important;
+				}
+				.progress-wrap{
+					position: absolute;
+					bottom:0;
+					left:0;
+					width:100%;
+					.progress {
+						height: 3px;
+						padding: 0px;
+						background-color: transparent;
+						border: none;
+						height: 3px;
+						margin-bottom:0px;
+						padding: 0px;
+						.meter{
+							transition: ease all .5s;
+						}
+					}
+				}
+			}
+			h3{
+				font-size: rem-calc(16);
+				color:$map-blue;
+				font-family: $font-family-merriweather-regular;
+				border-bottom: 2px solid #eeeeee;
+				padding-bottom: rem-calc(6);
+			}
+			h4{
+				font-size: 14px;
+				text-align: center;
+				color: #666666;
+				font-family: $font-family-proxima-regular;
+				.big-number{
+					  width: 100%;
+					  display: block;
+					  font-size: 39px;
+					  font-weight: bold;
+				}
+				&.big-num{
+					font-size: 12px;
+				}
+			}
+			h6{
+				color: $map-blue;	
+				font-size: rem-calc(12);
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				border-bottom: 2px solid #eeeeee;
+				font-family: $font-family-proxima-regular;
+				&.no-under{
+					border-bottom: 0px;
+				}
+
+			}
+			small{
+				color: #666666;
+			    float: right;
+			    text-align: right;
+			    margin-top: 5px;
+			    &.error{
+				    color: #FFFFFF;
+				    margin: 0px;
+				    float:none;
+				    text-align: left;
+				    display: none;
+				    width:100%;
+			    }
+			}
+			.quote-input{
+				background: #eeeeee;
+				border-radius: $global-radius;
+				text-align: center;
+				margin: rem-calc(5 0 0 0);
+			}
+			.quote-submit{
+				border-bottom: 4px solid rgba(0,0,0,.2);
+			    border-radius: 3px;
+			    width: 100%;
+			    padding: rem-calc(8);
+			    font-weight: bold;
+			    margin: rem-calc(15 0 0 0);
+			}
+		}
+		#map{
+			@media #{$small-only} { 
+				display: none;
+			}
+		}
+		
+	}
+	.city-quotes{
+		background: white;
+		padding:0px !important;
+		.block-equal{
+			padding-top:15px;
+			padding-bottom:15px;
+			min-height: 150px;
+			&:first-child{
+				@media #{$small-only} { 
+					border-bottom:2px solid #eeeeee;
+					border-right:0px;
+				}
+			}
+			blockquote{
+				@media #{$medium-up} { 
+				  position: relative;
+				  top: 50%;
+				  -ms-transform: translateY(-50%);
+				  -webkit-transform: translateY(-50%);
+				  transform: translateY(-50%);
+				  margin-top: 0px;
+				}
+				.quote-contain{
+				  height: 86px;
+				}
+				.quote-wrap{
+				  min-height: initial;
+				}
+			}
+		}
+		.blockquote {
+				background: url('http://assets.reviews.com/images/autoinsurance/quotes.png') no-repeat;
+				background-position: 50%;
+				text-align: center;
+				padding: 1.5rem;
+				margin-bottom: 1rem;
+				background-size: 165px;
+				position: relative;
+				top: 50%;
+				-ms-transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				& > p {
+					margin-bottom: 0;
+					line-height: 1rem;
+				}
+				.quote {
+					font-family: $font-family-merriweather-bold;
+					font-weight: bold;
+					font-style: italic;
+					padding: 1rem 0;
+					line-height: 2rem;
+				}
+				.author {
+					font-family: $font-family-proxima-bold;
+					font-size: 1.125rem;
+					font-weight: bold;
+				}
+				.author_title {
+					font-size: .875rem;
+					font-family: $font-family-proxima-thin;
+					font-weight: 700;
+				}
+			}
+
+	}	
+	#map-select{
+		padding:10px;
+		@media #{$medium-up} { 
+			display: none;
+		}
+		#map-option{
+			height: 2.7125rem;
+			background-color: white;
+			background-size: 52px;
+			background-position: 100% center;
+			border: 1px solid rgba(0,0,0,.2);
+			border-bottom: 3px solid rgba(0,0,0,.2);
+		}
+	}
+	
+	#see-more-states{
+		position: absolute;
+	    bottom: -42px;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    border: 1px solid #eeeeee;
+	    border-bottom: 2px solid rgba(0,0,0,.1);
+	    padding: 0.25rem 0.625rem;
+	    width: rem-calc(160);
+	    text-align: center;
+	    background-color: white;
+	    cursor: pointer;
+	    transition: ease all .2s;
+	    background: url('../images/background-stripes.png') white;
+	    border-radius: 0px 0px 4px 4px;
+	    color: #666;
+	    font-size: 16px;
+	    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	    background-position: 0px 0px;
+	    font-size: rem-calc(21);
+	    z-index:9;
+  	    &:hover{
+		    background-color: $primary-color;
+		    color:white;
+		    border: 1px solid $primary-color;
+			border-bottom: 2px solid rgba(0,0,0,.1);
+			-webkit-animation: moveBackground 10s linear infinite;
+			-moz-animation: moveBackground 10s linear infinite;
+			animation: moveBackground 10s linear infinite; 
+	    }
+	}
+	.hidden-states{
+		background: white;
+		border-bottom: 2px solid #f5f5f5;
+		display: none;
+		position: relative;
+		@include grid-row();
+		@extend .clearfix;
+		padding: rem-calc(30);
+		#close-hidden-states{
+			cursor: pointer;
+			position: absolute;
+			top:rem-calc(5);
+			right: rem-calc(8);
+			color: #666;
+		}
+		ul{
+			@include grid-column(12);
+			margin: rem-calc(0);
+		    list-style-type: none;
+		    padding: 0px;
+			@media #{$medium-up}{
+				@include grid-column(3);
+			}		    
+		    li{
+			    color: #666;
+			    font-size: rem-calc(14);
+			    a{
+				    transition:ease all .2s;
+				    color:$map-blue;
+				    border-bottom: 1px solid rgba(0,0,0,.1);
+				    &:hover{
+				   		 border-bottom: 1px solid rgba(0,0,0,.3);
+				    }
+			    }
+		    }
+	    }
+	}
+}
+
+
+.legendtext{
+	font-family: $font-family-proxima-regular;
+	font-size: rem-calc(12);
+}
+
+.legendtext-national{
+	font-family: $font-family-proxima-regular;
+	font-size: rem-calc(12);
+	fill: #00ADEF;
+	text-transform: uppercase;
+}
+
+
+#autoModal{
+	margin-bottom: 30px;
+	min-height: 86px;
+	table{
+		border:0px;
+		margin-bottom: 0px;
+	}
+	h1{
+		text-align: center;
+	}
+	h2{
+		text-align: center;
+	}
+
+}
+    
+.background {
+  fill: none;
+  pointer-events: none;
+}
+
+
+.active-state {
+	//fill: orange !important;
+	transition: ease all .2s;
+	//opacity: 1 !important;
+}
+.state{
+	cursor: pointer;
+	transition: ease all .2s;
+	//fill-opacity:.7;
+	&:hover{
+		flood-opacity:1;
+		transition: ease all .2s;
+		//filter: url(#drop-shadow);
+	}
+}
+
+
+
+
+#state-borders {
+  fill: none;
+  stroke: #008CBA;
+  stroke-width: .1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+
+
+@keyframes moveBackground {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: 100% 0px; } 
+}
+
+@-webkit-keyframes moveBackground {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: 100% 0px; } 
+}
